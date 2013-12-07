@@ -18,3 +18,28 @@ def capture(stream)
 end
 
 alias :silence :capture
+
+class AppTest < MiniTest::Unit::TestCase
+  def setup
+    silence(:stdout) do
+      args = ['new', destination_root]
+      Bookery::CLI.start(args)
+    end
+  end
+
+  def teardown
+    ::FileUtils.rm_rf(destination_root)
+  end
+
+  def destination_root
+    'sandbox'
+  end
+
+  def assert_file(relative_path)
+    assert File.exist?(File.join(destination_root, relative_path))
+  end
+
+  def assert_dir(relative_path)
+    assert File.directory?(File.join(destination_root, relative_path))
+  end
+end

@@ -6,7 +6,7 @@ require 'bookery/version'
 Gem::Specification.new do |spec|
   spec.name          = 'bookery'
   spec.version       = Bookery::VERSION
-  spec.authors       = ['pseudomuto']
+  spec.authors       = ['David Muto']
   spec.email         = ['david.muto@gmail.com']
   spec.description   = %q{A gem that gives you the tools you need to write your own book}
   spec.summary       = %q{A simple way to author your book}

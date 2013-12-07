@@ -1,30 +1,5 @@
 require 'test_helper'
 
-class AppTest < MiniTest::Unit::TestCase
-  def setup
-    silence(:stdout) do
-      args = ['new', destination_root]
-      Bookery::CLI.start(args)
-    end
-  end
-
-  def teardown
-    ::FileUtils.rm_rf(destination_root)
-  end
-
-  def destination_root
-    'sandbox'
-  end
-
-  def assert_file(relative_path)
-    assert File.exist?(File.join(destination_root, relative_path))
-  end
-
-  def assert_dir(relative_path)
-    assert File.directory?(File.join(destination_root, relative_path))
-  end
-end
-
 class CLITest < AppTest
 
   def test_new_creates_readme_file
@@ -37,5 +12,17 @@ class CLITest < AppTest
 
   def test_new_creates_book_folder
     assert_dir 'book'
+  end
+
+  def test_new_creates_en_folder_in_book
+    assert_dir 'book/en'
+  end
+
+  def test_new_creates_assets_folder
+    assert_dir 'assets'
+  end
+
+  def test_new_creates_config_yml
+    assert_file 'config.yml'
   end
 end
