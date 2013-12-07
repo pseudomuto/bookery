@@ -8,17 +8,15 @@ Gem::Specification.new do |spec|
   spec.version       = Bookery::VERSION
   spec.authors       = ['pseudomuto']
   spec.email         = ['david.muto@gmail.com']
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ''
+  spec.description   = %q{A gem that gives you the tools you need to write your own book}
+  spec.summary       = %q{A simple way to author your book}
+  spec.homepage      = 'http://pseudomuto.com/'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
-
-  spec.add_dependency 'redcarpet'
 
   spec.add_development_dependency 'bundler', '~> 1.3'
   spec.add_development_dependency 'rake'

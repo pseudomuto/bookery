@@ -1,24 +1,14 @@
 # Bookery
 
-TODO: Write a gem description
+My own custom tool for writing books
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'bookery'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install bookery
 
 ## Usage
 
-TODO: Write usage instructions here
+* `bookery new [PATH]` - create a new book
 
 ## Contributing
 
