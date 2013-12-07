@@ -2,10 +2,12 @@ PATH
   remote: .
   specs:
     bookery (0.0.1)
+      activesupport
 
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (3.0.0)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     coderay (1.1.0)

@@ -20,9 +20,13 @@ end
 alias :silence :capture
 
 class AppTest < MiniTest::Unit::TestCase
+  def template_name
+    'book'
+  end
+
   def setup
     silence(:stdout) do
-      args = ['new', destination_root]
+      args = ['new', destination_root, template_name]
       Bookery::CLI.start(args)
     end
   end
