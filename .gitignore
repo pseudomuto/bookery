@@ -5,3 +5,4 @@ bin/*
 sandbox/
 vendor/
 coverage/
+pkg/
