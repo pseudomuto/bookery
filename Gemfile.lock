@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bookery (0.0.1)
+    bookery (0.0.2)
       activesupport
       i18n
 

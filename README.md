@@ -1,6 +1,15 @@
 # Bookery
 
-My own custom tool for writing books
+My own custom tool for writing books. This is very much a work in progress right now.
+
+## TODO's for a reasonable v1
+
+* [ ] Support for variables (via config.yml)
+* [ ] Support for embedded assets
+* [ ] Build HTML
+* [ ] Build PDF
+* [ ] Build Mobi
+* [ ] Build ePub
 
 ## Installation
 
