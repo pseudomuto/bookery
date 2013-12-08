@@ -4,3 +4,4 @@ bin/*
 !bin/bookery
 sandbox/
 vendor/
+coverage/

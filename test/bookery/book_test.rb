@@ -6,15 +6,11 @@ class BookTest < AppTest
     @book = Bookery::Book.new('en', cwd: 'sandbox')
   end
 
-  def test_chapter_names
+  def test_loads_chapters
     expected_names = ['Introduction', 'Second Chapter']
+    actual_names = @book.chapters.map { |c| c.name }
 
-    puts @book.chapter_names
-    refute_empty @book.chapter_names
-
-    @book.chapter_names.each do |name|
-      assert_includes expected_names, name
-    end
+    assert_equal expected_names, actual_names
   end
 
   def template_name

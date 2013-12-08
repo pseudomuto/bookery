@@ -7,13 +7,9 @@ module Bookery
       @cwd = options[:cwd] || ''
     end
 
-    def chapter_names
-      Dir.entries(book_dir).collect do |entry|
-        if entry.size > 2
-          entry[3, entry.size].gsub(/-/, ' ').capitalize
-        else
-          nil
-        end
+    def chapters
+      @chapters ||= Dir.entries(book_dir).collect do |entry|
+        Chapter.new(entry) if entry.size > 2
       end.compact
     end
 
@@ -22,5 +18,6 @@ module Bookery
     def book_dir
       File.join(@cwd, 'book', @lang)
     end
+
   end
 end
