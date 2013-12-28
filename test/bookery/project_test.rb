@@ -5,6 +5,11 @@ class ProjectTest < Minitest::Test
     @project = Bookery::Project.new('test/data/project')
   end
 
+  def test_config_file_loaded
+    YAML.stubs(:load_file).with('test/data/project/config.yml').once
+    @project.config
+  end
+
   def test_books_returns_a_book_for_each_language
     assert_equal 2, @project.books.size
   end

@@ -8,6 +8,9 @@ book:
     - Kevin Centeno
     - Kevin Ackland
 
+  es:
+    title: 'El libro Testing'
+
 kramdown:
   input: GFM
   use_coderay: true
