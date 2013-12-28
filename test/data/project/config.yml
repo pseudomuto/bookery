@@ -1,0 +1,15 @@
+---
+book:
+  title: The Testing book
+  authors:
+    - David Muto
+    - Jesus Christ
+  editors:
+    - Kevin Centeno
+    - Kevin Ackland
+
+kramdown:
+  input: GFM
+  use_coderay: true
+  coderay_css: class
+  coderay_line_numbers: true
