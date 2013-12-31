@@ -6,7 +6,7 @@ module Bookery
       def create_chapters(book_dir)
         chapters = []
 
-        Dir.entries(book_dir).each do |path|
+        Dir.entries(book_dir).sort.each do |path|
           next if path =~ /\.\.?\z/
           chapters << Chapter.new(File.join(book_dir, path))
         end

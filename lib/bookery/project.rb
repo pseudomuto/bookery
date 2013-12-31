@@ -34,7 +34,7 @@ module Bookery
     def assets
       Dir.glob(File.join(dir, config[:assets_dir], '**/*')).reject do |file|
         File.directory?(file) or file =~ /\/(includes|templates)\//
-      end
+      end.sort
     end
 
     def publish(publishers)
