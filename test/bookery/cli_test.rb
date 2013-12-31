@@ -22,4 +22,13 @@ class CLITest < Minitest::Test
     @cli.stubs(:options).returns({ template: 'example' })
     @cli.new('project')
   end
+
+  def test_publish_publishes_book
+    FileUtils.stubs(:mkdir_p)
+    FileUtils.stubs(:cp)
+    File.stubs(:write)
+
+    @cli.stubs(:options).returns({ project_dir: 'test/data/project' })
+    @cli.publish
+  end
 end

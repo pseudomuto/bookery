@@ -1,6 +1,6 @@
 module Bookery
   class Book
-    attr_reader :title, :authors, :editors, :language
+    attr_reader :title, :authors, :editors, :language, :template
     attr_reader :chapters
 
     def initialize(chapters, config)
@@ -8,6 +8,7 @@ module Bookery
       @authors = config[:authors]
       @editors = config[:editors]
       @language = config[:language]
+      @template = config[:template]
       @chapters = chapters
     end
 

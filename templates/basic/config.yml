@@ -1,16 +1,11 @@
 ---
 book:
-  title: The Testing book
+  title: My Book
   authors:
-    - David Muto
-    - Jesus Christ
+    - Your name here
   editors:
-    - Kevin Centeno
-    - Kevin Ackland
+    - Any editors
   template: assets/templates/template.html.erb
-
-  es:
-    title: 'El libro Testing'
 
 generator:
   input: GFM

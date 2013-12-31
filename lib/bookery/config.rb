@@ -1,12 +1,12 @@
 module Bookery
   class Config
-    META_METHODS = [:title, :authors, :editors]
+    META_METHODS = [:title, :authors, :editors, :template]
 
     attr_reader :language
 
     def initialize(language, config)
       @language = language
-      @config = symbolize_keys(config)
+      @config = config.symbolize_keys
     end
 
     def [](key)
@@ -36,22 +36,6 @@ module Bookery
         config[language.to_sym][key]
       else
         nil
-      end
-    end
-
-    # Copied from http://devblog.avdi.org/2009/07/14/recursively-symbolize-keys/
-    def symbolize_keys(hash)
-      hash.inject({}) do |result, (key, value)|
-        new_key = case key
-                  when String then key.to_sym
-                  else key
-                  end
-        new_value = case value
-                    when Hash then symbolize_keys(value)
-                    else value
-                    end
-        result[new_key] = new_value
-        result
       end
     end
   end

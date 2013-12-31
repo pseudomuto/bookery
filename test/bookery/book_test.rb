@@ -10,7 +10,7 @@ class BookTest < Minitest::Test
     })
 
     book_dir = 'test/data/project/book/en'
-    chapters = Bookery::ChapterFactory.create_chapters(book_dir)
+    chapters = Bookery::Factories::ChapterFactory.create_chapters(book_dir)
 
     @book = Bookery::Book.new(chapters, config)
   end

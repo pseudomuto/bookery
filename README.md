@@ -1,24 +1,30 @@
 # Bookery
 
-TODO: Write a gem description
+[![Build Status](https://travis-ci.org/pseudomuto/bookery.png)](https://travis-ci.org/pseudomuto/bookery)
+
+My own (very opinionated) custom tool for writing books. This is very much a work in progress right now.
+
+## TODO's for a reasonable v1
+
+* [ ] Build PDF
+* [ ] Build Mobi
+* [ ] Build ePub
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'bookery'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
     $ gem install bookery
 
-## Usage
+_If you're using rbenv, run `rbenv rehash` after the installation to ensure the shim is created_
 
-TODO: Write usage instructions here
+## Creating a New Book
+
+* `bookery new <path>`
+
+## Publishing
+
+From within the project directory:
+
+* `bookery pub`
 
 ## Contributing
 

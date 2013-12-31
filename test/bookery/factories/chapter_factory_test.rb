@@ -4,7 +4,7 @@ class ChapterFactoryTest < Minitest::Test
 
   def setup
     book_dir = 'test/data/project/book/en'
-    @chapters = Bookery::ChapterFactory.create_chapters(book_dir)
+    @chapters = Bookery::Factories::ChapterFactory.create_chapters(book_dir)
   end
 
   def test_create_chapters_loads_each_chapter
