@@ -5,6 +5,11 @@ class CLITest < Minitest::Test
     @cli = Bookery::CLI.new
   end
 
+  def test_source_root_points_to_templates
+    templates_dir = File.expand_path('../../../templates', __FILE__)
+    assert_equal templates_dir, Bookery::CLI.source_root
+  end
+
   def test_version_returns_gem_version
     expected = Bookery::VERSION
 
@@ -13,7 +18,7 @@ class CLITest < Minitest::Test
   end
 
   def test_new_creates_project
-    @cli.stubs(:directory).with('book', 'project').once
+    @cli.stubs(:directory).with('basic', 'project').once
     @cli.new('project')
   end
 

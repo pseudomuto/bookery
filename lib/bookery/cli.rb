@@ -2,6 +2,11 @@ module Bookery
   class CLI < Thor
     include Thor::Actions
 
+    source_root(File.expand_path(
+      '../../../templates',
+      Pathname.new(__FILE__).realpath
+    ))
+
     map 'v' => :version
     map 'p' => :publish
 
@@ -13,7 +18,7 @@ module Bookery
     desc 'new <path>', 'creates a new book at the specified path'
     method_option :template, banner: '<template>'
     def new(path)
-      template = 'book'
+      template = 'basic'
       template = options[:template] if options[:template]
       directory(template, path)
     end
