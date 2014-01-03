@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["David Muto"]
   spec.email         = ["david.muto@gmail.com"]
   spec.description   = %q{
-    A gem that gives you (or will give you) the tools you need to write your own book
+    A gem that gives you the tools you need to write your own book
   }
   spec.summary       = %q{A simple way to author your book}
   spec.homepage      = 'https://github.com/pseudomuto/bookery'
