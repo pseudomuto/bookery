@@ -18,18 +18,26 @@ _If you're using rbenv, run `rbenv rehash` after the installation to ensure the 
 
 ## Creating a New Book
 
-* `bookery new <path>`
+    $ bookery new <project_dir>
+
+This will create a new [project] in the specified directory.
 
 ## Publishing
 
 From within the project directory:
 
-* `bookery pub`
+    $ bookery publish
+
+This will generate an HTML version of your book for each language in the [project].
+
+## Editing
+
+For a guideline on editing, checkout the [editing] docs.
 
 ## Contributing
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Wanna contribute? Awesome! Check out the [contributing guidelines] to get started.
+
+[project]: docs/project.md
+[editing]: docs/editing.md
+[contributing guidelines]: docs/contributing.md
