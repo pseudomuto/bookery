@@ -1,6 +1,7 @@
 # Bookery
 
 [![Build Status](https://travis-ci.org/pseudomuto/bookery.png)](https://travis-ci.org/pseudomuto/bookery)
+[![Gem Version](https://badge.fury.io/rb/bookery.png)](http://badge.fury.io/rb/bookery)
 
 My own (very opinionated) custom tool for writing books. This is very much a work in progress right now.
 
