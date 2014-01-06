@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/pseudomuto/bookery.png)](https://travis-ci.org/pseudomuto/bookery)
 [![Gem Version](https://badge.fury.io/rb/bookery.png)](http://badge.fury.io/rb/bookery)
+[![Code Climate](https://codeclimate.com/github/pseudomuto/bookery.png)](https://codeclimate.com/github/pseudomuto/bookery)
 
 My own (very opinionated) custom tool for writing books. This is very much a work in progress right now.
 
